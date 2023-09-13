@@ -11,6 +11,7 @@
 
   ExecStart=/bin/bash /usr/bin/kill_zombie.sh start
   ExecStop=/bin/kill -3 $MAINPID
+  ExecReload=/bin/kill -HUP $MAINPID
   Restart=on-failure
   RestartSec=5s
 

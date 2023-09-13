@@ -13,10 +13,5 @@ do
    else
      : 
    fi
-   sleep 2s 
+   sleep 1s 
 done
-
-
-[ "$1" == "stop" ] && cts disconnect  
-
-
