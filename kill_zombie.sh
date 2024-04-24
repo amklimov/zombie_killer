@@ -4,7 +4,7 @@ logfile=/var/log/kill_zombie.log
 
 while true : 
 do
-     ps -xal | grep defunct | grep -v grep | awk '{print $4, $13}' > $logfile
+     ps -xal | grep defunct | grep -v grep | awk '{print $4, $13}' >> $logfile
      ps -xal | grep defunct | grep -v grep 
    if
      [ $? -eq 0 ] 
@@ -13,5 +13,5 @@ do
    else
      : 
    fi
-   sleep 1s 
+   sleep 5s 
 done
